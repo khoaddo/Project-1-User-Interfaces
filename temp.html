@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<style>
+#rcorners1 {
+  border-radius: 25px;
+  background: #9CCDEA ;
+  padding: 20px; 
+  width: 500px;
+  height: 800px;
+  border-width:20px;
+  border-style:solid;
+  border-color:#000000;
+}
+#rcorners2 {
+  border-radius: 15px 15px 50px 50px;
+  background: #BCC0BC;
+  padding: 20px;
+  width: 200px;
+  height: 500px;
+}
+#rcorners3 {
+  background: black;
+  padding: 20px;
+  width: 100px;
+  height: 30px;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Smart Water Bottle UI</title>
+    
+    <!-- The following line references an external css file -->
+    <!-- It defines style rules for your page, and elements in your page -->
+    <link href="css/style.css" rel="stylesheet">
+    
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <center><h3 class="animate-charcter"> Smart Water Bottle</h3></center>
+	  <center><h1 class="animate-charcter"> by Khoa Do</h1></center>
+    </div>
+
+<center>
+<div id="rcorners3">
+</div>
+</center>
+  </div>
+  <center>
+  <div id="rcorners2">
+  <h1>
+  <div id = "clock" onload="currentTime()"></div>
+  </h1>
+  <center>
+  <b> 14.7 oz / 21 oz </b>
+  <div class="bcontainer">
+	<div class="barcontainer">
+    <div class="bar" style="height:70%">
+    </div>
+  </div>
+  </div>
+  </div>
+  </center>
+  
+</div>
+</center>
+
+
+
+
+
+
+<center>
+<h1 style="color:black; font-family: 'Poppins', sans-serif;"> App UI </h1>
+<div id="rcorners1">
+<ul>
+  <li><a href="goals.html">Goals</a></li>
+  <li><a href="gps.html">Find My Bottle</a></li>
+  <li><a href="stat.html">Statistics</a></li>
+  <li><a href="temp.html">Temperature</a></li>
+</ul>
+<br>
+<br>
+<br>
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="68" class="slider" id="myRange">
+  <h1 style="color:#002B5E; font-family: 'Poppins', sans-serif;">Temperature of water: </h1>
+  <h1 style="color:#002B5E;font-size:150px; font-family: 'Poppins', sans-serif;"><span id="demo"></span>°F</h1>
+</div>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+
+
+</div>
+</center>
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+    <!-- Load external JS files -->
+    <!-- This is where you will do most of the 'work' for your applications -->
+    <script src="js/main.js"></script>
+</body>
+</html>

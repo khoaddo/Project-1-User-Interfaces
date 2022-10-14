@@ -1,0 +1,230 @@
+/* This is an empty style sheet in CSS */
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 80px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+@keyframes growProgressBar {
+  0%, 33% { --pgPercentage: 0; }
+  100% { --pgPercentage: var(--value); }
+}
+
+@property --pgPercentage {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"] {
+  --size: 12rem;
+  --fg: #369;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+    ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
+/* demo */
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+input[type=submit]:hover {
+  background-color: #555;
+  color: white;
+}
+
+input[type=button]:hover {
+  background-color: #555;
+  color: white;
+}
+
+button[type=button] {
+	display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+button[type=button]:hover {
+	  background-color: #555;
+      color: white;
+}
+	
+
+.box {
+  margin: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* (B1) INFORMATION BOX */
+.info {
+  color: brown;
+  background: cornsilk;
+  border: 1px solid burlywood;
+}
+
+/*TEMPERATURE*/
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #002B5E;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #002B5E;
+  cursor: pointer;
+}
+
+/*TEMPERATURE*/
+
+/*BAR*/
+.bcontainer{
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  margin:50px auto;
+}
+
+.barcontainer{
+  background-color: #181818;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  margin-left: 50px;
+  width: 50px;
+  height: 320px;
+  float: left;
+  //border darken(#98AFC7, 40%) 3px solid
+}
+  
+.bar{
+  background-color: #9BC9C7;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  //border-top: 6px solid #FFF;
+  box-sizing: border-box;
+  animation: grow 1.5s ease-out forwards;
+  transform-origin: bottom;
+}
+@keyframes grow{
+  from{
+    transform: scaleY(0);
+  }
+}
+/*BAR*/
+
+
+
+
